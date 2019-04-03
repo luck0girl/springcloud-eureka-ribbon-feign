@@ -1,0 +1,15 @@
+# springcloud-eureka-ribbon-feign
+这是一个springcloud示例，其中有eureka注册中心，ribbon负载均衡，feign的简单调用案例。
+
+microservice-eureka-server是一个简单的eureka注册中心，@EnableEurekaServer表示启用eureka注册中心，要先启动好这个注册中心，然后再启动别的项目。
+
+
+microservice-eureka-client是一个eureka服务端，@EnableEurekaClient表示启用eureka客户端，是一个简单的服务提供端，该服务端会将自己注册到注册中心。
+
+
+microservice-consumer-ribbon是一个简单的客户端，集成了ribbon，ribbon有负载均衡功能，用注解@LoadBalance启用ribbon并开启负载均衡，
+restTemplate进行远程访问http服务。
+
+
+microservice-feign是集成了feign的一个简单客户端，feign本身整合了ribbon和hystrix，支持ribbon的负载均衡，支持hystrix和他的fallback。
+feign是一种声明式服务调用，@EnableFeignClients注解表示启用feign。
