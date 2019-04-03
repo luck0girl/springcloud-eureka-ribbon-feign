@@ -1,0 +1,16 @@
+server:
+  port: 8766
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+    register-with-eureka: false   #consumer不注册到eureka中，只是进行服务调用
+#  instance:
+#    lease-renewal-interval-in-seconds: 2
+#    instance-id: ribbon-8766.com    #在信息列表时显示主机名称
+#    prefer-ip-address: true     #访问的路径变为ip地址
+
+spring:
+  application:
+    name: ribbon-consumer

@@ -1,0 +1,16 @@
+server:
+  port: 8766
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+    register-with-eureka: false   #consumer��ע�ᵽeureka�У�ֻ�ǽ��з������
+#  instance:
+#    lease-renewal-interval-in-seconds: 2
+#    instance-id: ribbon-8766.com    #����Ϣ�б�ʱ��ʾ��������
+#    prefer-ip-address: true     #���ʵ�·����Ϊip��ַ
+
+spring:
+  application:
+    name: ribbon-consumer
